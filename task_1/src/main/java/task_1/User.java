@@ -1,10 +1,18 @@
 package task_1;
 
-public class User extends Address{
+import java.util.Set;
 
-    public User(String street, String zipcode, String city) {
-        super(street, zipcode, city);
-    }
+public class User{
+    private String firstname;
+    private String lastname;
+    private String username;
+    private String password;
+    private String email;
+    private int ranking;
+    private boolean admin;
     
+    private Address address;
+    private Set BillingDetails;
     
+    public User() {}
 }
