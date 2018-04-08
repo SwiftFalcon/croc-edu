@@ -17,7 +17,6 @@ public class User{
 
     public User(String firstname, String lastname, String username, String password, String email, int ranking,
             boolean admin, Address address) {
-        super();
         this.firstname = firstname;
         this.lastname = lastname;
         this.username = username;
@@ -26,7 +25,6 @@ public class User{
         this.ranking = ranking;
         this.admin = admin;
         this.address = address;
-        //BillingDetails = billingDetails;
     }
     
     public void setBilling(BillingDetails newOwnerName){
