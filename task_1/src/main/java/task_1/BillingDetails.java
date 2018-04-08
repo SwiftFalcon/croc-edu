@@ -1,5 +1,6 @@
 package task_1;
 
+//N-арная ассоциация с классом User
 public class BillingDetails {
 
     private String ownername;
