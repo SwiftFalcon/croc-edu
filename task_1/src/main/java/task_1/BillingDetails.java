@@ -2,7 +2,7 @@ package task_1;
 
 public class BillingDetails {
 
-    public String ownername;
+    private String ownername;
     //private User user;
     
     public BillingDetails (String o){
