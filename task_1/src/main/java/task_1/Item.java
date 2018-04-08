@@ -19,6 +19,7 @@ public class Item {
     private Bid successful;
     private Set<Bid> itemBid = new HashSet<Bid>();
     private Set<User> soldBy = new HashSet<User>();
+    private Set<Category> categoryType = new HashSet<Category>();
     
     public void setItemBid(Bid b){
         itemBid.add(b);
@@ -81,6 +82,15 @@ public class Item {
     }
     public void deleteSoldBy(User u){
         soldBy.remove(u);
+    }
+    public Set<Category> getCategoryType() {
+        return categoryType;
+    }
+    public void setCategoryType(Set<Category> categoryType) {
+        this.categoryType = categoryType;
+    }
+    public void deleteCategoryType(Category c) {
+        categoryType.remove(c);
     }
     
 }
