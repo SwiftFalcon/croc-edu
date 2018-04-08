@@ -5,7 +5,6 @@ import java.io.Serializable;
 public class Category implements Serializable{
     private String name;
     
-    private Category parentCategory;
-    private Set childCategories = new HashSet();
+    //private Set childCategories = new HashSet();
     public Category() {} 
 }
