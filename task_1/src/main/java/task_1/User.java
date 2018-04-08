@@ -11,10 +11,11 @@ public class User{
     public String email;
     public int ranking;
     public boolean admin;
-    
+   
     public Address address;
     public Set<BillingDetails> billing = new HashSet<BillingDetails>();
-
+    private Set<Item> bought = new HashSet<Item>();
+    
     public User(String firstname, String lastname, String username, String password, String email, int ranking,
             boolean admin, Address address) {
         this.firstname = firstname;
@@ -35,5 +36,15 @@ public class User{
     }
     public void deleteRoom(BillingDetails b){
         billing.remove(b);
+    }
+
+    public Set<Item> getBought() {
+        return bought;
+    }
+    public void setBought(Item newBought) {
+        bought.add(newBought);
+    }
+    public void deleteBought(Item i){
+        bought.remove(i);
     }
 }
