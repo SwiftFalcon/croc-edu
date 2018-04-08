@@ -18,6 +18,7 @@ public class Item {
     public Date approvalDateTime;
     private Bid successful;
     private Set<Bid> itemBid = new HashSet<Bid>();
+    private Set<User> soldBy = new HashSet<User>();
     
     public void setItemBid(Bid b){
         itemBid.add(b);
@@ -72,5 +73,14 @@ public class Item {
         this.endDate = endDate;
     }
     
+    public Set<User> getSoldBy() {
+        return soldBy;
+    }
+    public void setSoldBy(Set<User> soldBy) {
+        this.soldBy = soldBy;
+    }
+    public void deleteSoldBy(User u){
+        soldBy.remove(u);
+    }
     
 }

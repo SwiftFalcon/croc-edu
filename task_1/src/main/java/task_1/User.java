@@ -6,25 +6,25 @@ import java.util.Set;
 public class User{
     public String firstname;
     public String lastname;
-    public String username;
-    public String password;
-    public String email;
+    private String username;
+    private String password;
+    private String email;
     public int ranking;
-    public boolean admin;
+    private boolean admin;
    
     public Address address;
-    public Set<BillingDetails> billing = new HashSet<BillingDetails>();
+    private Set<BillingDetails> billing = new HashSet<BillingDetails>();
     private Set<Item> bought = new HashSet<Item>();
     
     public User(String firstname, String lastname, String username, String password, String email, int ranking,
             boolean admin, Address address) {
         this.firstname = firstname;
         this.lastname = lastname;
-        this.username = username;
-        this.password = password;
-        this.email = email;
+        this.setUsername(username);
+        this.setPassword(password);
+        this.setEmail(email);
         this.ranking = ranking;
-        this.admin = admin;
+        this.setAdmin(admin);
         this.address = address;
     }
     
@@ -46,5 +46,37 @@ public class User{
     }
     public void deleteBought(Item i){
         bought.remove(i);
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public boolean isAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
     }
 }
